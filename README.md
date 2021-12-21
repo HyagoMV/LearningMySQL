@@ -11,7 +11,12 @@ CREATE USER 'user'@'localhost' IDENTIFIED BY 'pass';
 CREATE USER 'user'@'%' IDENTIFIED BY 'pass';
 ```
 
-## Conceder Permissão
+# Exclução de Usuário
+``` SQL
+DROP USER 'user_name'@'host_name';
+```
+
+## Conceder Permissão ao Usuário
 ### Conceder Permissão TOTAL
 ``` SQL
 GRANT ALL PRIVILEGES ON *.* TO 'user_name'@'host_name';
@@ -26,7 +31,12 @@ GRANT INSERT, SELECT ON db_name.table_name TO 'user_name'@'host_name';
  
 ```
 
-## Revogar Permissão
+# Exibir Permissões do Usuário
+``` SQL
+SHOW GRANTS FOR 'user_name'@'host_name';
+```
+
+## Revogar Permissão do Usuário
 ### Revogar TODAS as Permissão
 ``` SQL
 REVOKE ALL PRIVILEGES, GRANT OPTION FROM'user_name'@'host_name';
@@ -36,12 +46,5 @@ REVOKE ALL PRIVILEGES, GRANT OPTION FROM'user_name'@'host_name';
 REVOKE SELECT, INSERT ON spring_mvc_db.* FROM 'user_name'@'host_name';
 ```
 
-## Exibir as Permissões
-``` SQL
-SHOW GRANTS FOR 'user_name'@'host_name';
-```
 
-# Excluir Usuário
-``` SQL
-DROP USER 'user_name'@'host_name';
-```
+
